@@ -7,9 +7,9 @@ REACT, SCSS
 
 ## Sketch
 <p>Structure</p>
-<img width='400' height='auto' src='https://github.com/Lee-ji-soo/shoppingmall_REACT/blob/main/structure1.jpeg?raw=true'>
+<img width='800' height='auto' src='https://github.com/Lee-ji-soo/shoppingmall_REACT/blob/main/structure1.jpeg?raw=true'>
 <p>Login Access Router</p>
-<img width='400' height='auto' src='https://github.com/Lee-ji-soo/shoppingmall_REACT/blob/main/structure1.jpeg?raw=true'>
+<img width='800' height='auto' src='https://github.com/Lee-ji-soo/shoppingmall_REACT/blob/main/structure1.jpeg?raw=true'>
 
 ## Todo List
 ### REACT
