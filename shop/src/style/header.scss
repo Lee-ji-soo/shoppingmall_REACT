@@ -10,6 +10,17 @@
     background-color:rgba(255, 255, 255, 0.664);
     box-sizing: border-box;
     #navigation{
+        padding:$basicLRMargin;
+
+        width:100%;
+        height:$basicH;
+        display:flex;
+        margin-top:.5rem;
+    
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+
         h1{
             color:#333;
             font-size:1.5rem;
@@ -21,10 +32,25 @@
             li{
                 color:#333;
                 font-weight:700;
+                padding:$listPadding;
                 &:hover{
                     text-decoration: underline;
                 }
             } 
+        }
+    }
+}
+
+@media(max-width:700px){
+    #header{
+        ul{
+            li{
+                position:absolute;
+                top:0%;
+                width:100%;
+                left:100%;
+                transition:all 1s ease;
+            }
         }
     }
 }
