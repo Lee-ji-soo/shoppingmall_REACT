@@ -64,14 +64,14 @@ const FooterStyle = styled.footer`
     color:#fff;
         .con-wrap{
         padding: 4rem;
-        padding - top: 4rem;
-        padding - bottom: 4rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
             .con{
-            font - family: 'Lato';
-            line - height: 1.3rem;
-            font - weight: 100;
+            font-family: 'Lato';
+            line-height: 1.3rem;
+            font-weight: 100;
                 .license{
-                font - weight: 400;
+                font-weight: 400;
             }
         }
     }
