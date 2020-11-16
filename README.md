@@ -15,8 +15,8 @@ REACT, SCSS
 ### REACT
 #### Login
 - [x] id, password 공백 여부 확인
-- [x] saga로 로그인 아이디 일치 여부 확인
-- [ ] GuardRoute로 로그인 시, 페이지 이동 
+- [x] saga로 로그인 아이디 일치 여부 확인 [LOGIN,LOOUT,LOGIN_SUCCESS,LOGIN_FAILURE]
+- [x] GuardRoute로 로그인 시, 페이지 이동 
 
 #### Main
 - [ ] 상품 '낮은 순부터|높은 순부터' 필터 적용
@@ -48,7 +48,7 @@ REACT, SCSS
 - [x] Footer
 - [ ] header responsive
 - [ ] Main responsive
-- [ ] Login responsive
+- [x] Login responsive
 - [ ] Detail responsive
 - [ ] Cart responsive
 - [ ] MyPage responsive
