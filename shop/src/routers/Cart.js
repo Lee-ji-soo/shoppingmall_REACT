@@ -1,8 +1,9 @@
 import React from 'react';
+import { MainStyle } from '../styled/style';
 
 const Cart = () => {
     return (
-        <>Cart</>
+        <MainStyle>Cart</MainStyle>
     )
 };
 

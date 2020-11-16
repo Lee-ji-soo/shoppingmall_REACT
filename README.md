@@ -9,13 +9,14 @@ REACT, SCSS
 <p>Structure</p>
 <img width='800' height='auto' src='https://github.com/Lee-ji-soo/shoppingmall_REACT/blob/main/structure1.jpeg?raw=true'>
 <p>Login Access Router</p>
-<img width='800' height='auto' src='https://github.com/Lee-ji-soo/shoppingmall_REACT/blob/main/structure1.jpeg?raw=true'>
+<img width='800' height='auto' src='https://github.com/Lee-ji-soo/shoppingmall_REACT/blob/main/structure2.jpeg?raw=true'>
 
 ## Todo List
 ### REACT
 #### Login
-- [ ] id, password 공백 여부 확인
-- [ ] saga로 로그인 아이디 일치 여부 확인 
+- [x] id, password 공백 여부 확인
+- [x] saga로 로그인 아이디 일치 여부 확인
+- [ ] GuardRoute로 로그인 시, 페이지 이동 
 
 #### Main
 - [ ] 상품 '낮은 순부터|높은 순부터' 필터 적용
@@ -38,12 +39,13 @@ REACT, SCSS
 - [ ] 주소 API 연동
 
 ### SCSS
-- [ ] Header
+- [x] Header
 - [ ] Main
-- [ ] Login
+- [x] Login
 - [ ] Detail
 - [ ] Cart
 - [ ] MyPage
+- [x] Footer
 - [ ] header responsive
 - [ ] Main responsive
 - [ ] Login responsive

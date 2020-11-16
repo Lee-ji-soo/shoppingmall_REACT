@@ -1,8 +1,9 @@
 import React from 'react';
+import { MainStyle } from '../styled/style';
 
 const Mypage = () => {
     return (
-        <>Mypage</>
+        <MainStyle>Mypage</MainStyle>
     )
 };
 
