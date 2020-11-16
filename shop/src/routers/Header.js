@@ -1,16 +1,24 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { AuthAction } from '../actions';
 
 const Header = () => {
+    const dispatch = useDispatch();
     const logged = useSelector(({ authReducer }) => authReducer.logged);
+
+    const handleLogin = () => {
+        logged
+            ? dispatch(AuthAction.logout())
+            : null;
+    }
 
     return (
         <section id='header'>
             <div id='navigation'>
                 <h1>SHOPPP</h1>
                 <ul>
-                    <li>
+                    <li onClick={handleLogin}>
                         <Link to='/login'>{logged ? 'LOGOUT' : 'LOGIN'}</Link>
                     </li>
                     <li>

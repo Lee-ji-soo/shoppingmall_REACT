@@ -13,7 +13,7 @@ const App = () => {
             <Header />
             <Switch>
                 <GuardRoute path='/login' component={Login} logged={logged} needLogin={false} />
-                <GuardRoute path='/main' component={Main} logged={logged} needLogin={false} />
+                <Route path='/main' component={Main} />
                 <GuardRoute path='/cart' component={Cart} logged={logged}
                     needLogin={true} />
                 <GuardRoute path='/mypage' component={Mypage} logged={logged}

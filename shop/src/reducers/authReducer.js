@@ -14,6 +14,14 @@ const authReducer = (state = initialData, action) => {
                 payload: action.payload
             }
         }
+        case AuthAction.LOGOUT: {
+            return {
+                ...state,
+                auth: {},
+                logged: false,
+                failure: 0
+            }
+        }
         case AuthAction.LOGIN_SUCCESS: {
             return {
                 ...state,
