@@ -32,7 +32,6 @@ app.use(session({
 
 app.post('/signin', (req, res) => {
     const { body: { id, password } } = req;
-    console.log('signin', id, password)
     if (id == ID && password === PASSWORD) {
         req.session.id = id;
         res.send({ valid: true })
