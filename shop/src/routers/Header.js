@@ -13,6 +13,12 @@ const Header = () => {
             : null;
     }
 
+    const handleAccess = () => {
+        logged
+            ? null
+            : alert('로그인이 필요합니다.')
+    }
+
     return (
         <section id='header'>
             <div id='navigation'>
@@ -24,10 +30,10 @@ const Header = () => {
                     <li>
                         <Link to='/main'>MAIN</Link>
                     </li>
-                    <li>
+                    <li onClick={handleAccess}>
                         <Link to='/cart'>CART</Link>
                     </li>
-                    <li>
+                    <li onClick={handleAccess}>
                         <Link to='/mypage'>MYPAGE</Link>
                     </li>
                 </ul>

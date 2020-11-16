@@ -9,6 +9,7 @@ const MainStyle = styled.section`
 `
 const LoginStyle = styled.section`
     width:35%;
+    min-width:440px;
     margin:6rem auto;
         #modal_title{
         font-size:2rem;
@@ -49,6 +50,11 @@ const LoginStyle = styled.section`
                     }
                 }
          }
+
+ @media (max-width:758px){
+    width:85%;
+ }
+
 `
 
 const Warning = styled.p`
