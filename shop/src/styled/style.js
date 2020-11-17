@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Button, Line, Strong } from './variables';
 
-
 const MainStyle = styled.section`
     padding-top:60px;
     width:100%;
@@ -63,6 +62,7 @@ const Warning = styled.p`
     font-size:${Strong.fontSize};
     margin:${Line.margin};
 `
+
 const FooterStyle = styled.footer`
     width: 100%;
     height: max-content;

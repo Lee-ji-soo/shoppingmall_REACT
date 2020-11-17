@@ -19,7 +19,9 @@ REACT, SCSS
 - [x] GuardRoute로 로그인 시, 페이지 이동 
 
 #### Main
-- [ ] 상품 '낮은 순부터|높은 순부터' 필터 적용
+- [ ] 메인 상단 페이지
+- [x] 상품 렌더
+- [ ] 상품 '낮은 순부터|높은 순부터' 정렬 필터 적용
 - [ ] 상품 더 보기 버튼 클릭 시 API로 상품 불러오기
 - [ ] 상품 클릭 시 상세페이지로 연결 > 클릭 아이디 Detail 컴포넌트로 전달
 
@@ -40,14 +42,16 @@ REACT, SCSS
 
 ### SCSS
 - [x] Header
-- [ ] Main
+- [x] Main jumbo
+- [x] Main Product
 - [x] Login
 - [ ] Detail
 - [ ] Cart
 - [ ] MyPage
 - [x] Footer
 - [ ] header responsive
-- [ ] Main responsive
+- [ ] Main jumbo responsive
+- [ ] Main Product responsive
 - [x] Login responsive
 - [ ] Detail responsive
 - [ ] Cart responsive
