@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { MainStyle, ListStyle } from '../styled';
 import { ListItems, MainBanner, SortButton, MoreButton } from '../components';
-import { sortAction } from '../actions';
+import { sortAction, detailAction } from '../actions';
 import { api } from '../utils/api';
 
 const Main = () => {
+    const history = useHistory();
     const dispatch = useDispatch();
     const Items = useSelector(({ sortReducer }) => sortReducer.Items, []);
     const [state, setState] = useState({
@@ -38,13 +40,19 @@ const Main = () => {
         }
     };
 
+    const onDetail = (id) => {
+        dispatch(detailAction.onDetail(id));
+        history.push('/detail');
+    }
+
     async function fetchItems() {
         const data = await api.fetchItems();
+        console.log(data);
     }
 
     const onLoadMore = () => {
         if (more == 0) {
-            // fetchItems();
+            fetchItems();
         }
     };
 
@@ -54,7 +62,7 @@ const Main = () => {
             <SortButton state={state} onSortLow={onSortLow} onSortHigh={onSortHigh} />
             <ListStyle>
                 {
-                    Items.map(item => <ListItems item={item} key={`item${item.id}`} />)
+                    Items.map(item => <ListItems onDetail={onDetail} item={item} key={`item${item.id}`} />)
                 }
             </ListStyle>
             <MoreButton onLoadMore={onLoadMore} />

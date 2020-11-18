@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import { Header, Footer, Login, Main, Cart, Mypage } from './routers';
+import { Header, Footer, Login, Main, Cart, Mypage, Detail } from './routers';
 import { GuardRoute } from './guards';
 
 const App = () => {
@@ -12,6 +12,7 @@ const App = () => {
             <Switch>
                 <GuardRoute path='/login' component={Login} logged={logged} needLogin={false} />
                 <Route path='/main' component={Main} />
+                <Route path='/detail' component={Detail} />
                 <GuardRoute path='/cart' component={Cart} logged={logged}
                     needLogin={true} />
                 <GuardRoute path='/mypage' component={Mypage} logged={logged}

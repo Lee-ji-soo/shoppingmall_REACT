@@ -7,7 +7,7 @@ const MainBannerStyle = styled.section`
     height:max-content;
         #top-img{
              width:100%;
-             height:240px;
+             height:220px;
              filter:brightness(120%);
             .shoppingCart{
                 width:10rem;

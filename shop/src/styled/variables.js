@@ -1,6 +1,6 @@
 const Basic = {
     padding: '0 2rem',
-    paddingTop: '2rem'
+    paddingTop: '4rem'
 };
 
 const Button = {

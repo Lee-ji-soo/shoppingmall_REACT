@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Item } from '../styled/mainItem';
 import { nf } from '../utils/const';
 
-const ListItems = ({ item: { id, brand, src, name, price, } }) => {
+const ListItems = ({ onDetail, item: { id, brand, src, name, price, } }) => {
     const [hover, setHover] = useState(false)
 
     const handleMouseOver = () => {
@@ -14,7 +14,7 @@ const ListItems = ({ item: { id, brand, src, name, price, } }) => {
     }
 
     return (
-        <Item onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} >
+        <Item onClick={() => { onDetail(id) }} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} >
             <img className='img' src={src[0]} />
             <div className={`info ${hover ? 'displayBlock' : ''}`} >
                 <p className='brand'>{brand}</p>

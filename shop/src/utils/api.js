@@ -1,11 +1,9 @@
 const api = {
     fetchItems: async () => {
         const res = await
-            fetch('http://localhost:3000/more', {
-                method: 'GET'
-            });
+            fetch('../data/more.json');
         await console.log(res);
-        return await res;
+        return await res.json();
     },
 }
 
