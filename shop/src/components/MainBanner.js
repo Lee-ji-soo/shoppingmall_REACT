@@ -13,7 +13,6 @@ const MainBanner = () => {
     };
 
     const animate = () => {
-        console.log(stageWidth)
         x += vx;
         if (x > stageWidth - 150) {
             vx *= -1;
@@ -26,11 +25,9 @@ const MainBanner = () => {
         requestAnimationFrame(animate);
     };
 
-    window.requestAnimationFrame(animate);
-    window.addEventListener('resize', resize);
-
     useEffect(() => {
-        console.log('useEffect', cartRef)
+        window.requestAnimationFrame(animate);
+        window.addEventListener('resize', resize);
     }, [])
 
     return (

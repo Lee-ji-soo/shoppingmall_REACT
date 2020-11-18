@@ -21,7 +21,6 @@ const Login = () => {
             alert('이메일이 형식에 맞지 않습니다.')
         } else {
             e.preventDefault();
-            console.log(id, password)
             dispatch(AuthAction.login({ id, password }))
             resetInput();
             return true;
