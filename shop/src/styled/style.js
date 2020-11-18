@@ -1,10 +1,12 @@
 import styled from 'styled-components';
-import { Button, Line, Strong } from './variables';
+import { Button, Line, Strong, Basic } from './variables';
 
 const MainStyle = styled.section`
-    padding-top:60px;
+    padding-top:${Basic.paddingTop};
     width:100%;
     height:max-content;
+    box-sizing: border-box;
+    list-style-type:none;
 `
 const LoginStyle = styled.section`
     width:35%;
@@ -55,14 +57,12 @@ const LoginStyle = styled.section`
  }
 
 `
-
 const Warning = styled.p`
     font-weight:${Strong.fontWeight};
     color:${Strong.fontColor};
     font-size:${Strong.fontSize};
     margin:${Line.margin};
 `
-
 const FooterStyle = styled.footer`
     width: 100%;
     height: max-content;
@@ -82,4 +82,5 @@ const FooterStyle = styled.footer`
         }
     }
 `
+
 export { MainStyle, FooterStyle, LoginStyle, Warning }

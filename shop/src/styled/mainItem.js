@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 const ListStyle = styled.ul`
+    margin:0;
+    padding:0;
     padding-top:2rem;
     padding-bottom:2rem;
     display:grid;

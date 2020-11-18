@@ -19,7 +19,7 @@ REACT, SCSS
 - [x] GuardRoute로 로그인 시, 페이지 이동 
 
 #### Main
-- [ ] 메인 상단 페이지
+- [x] 메인 상단 페이지 request Animation Frames (useRef)
 - [x] 상품 렌더
 - [ ] 상품 '낮은 순부터|높은 순부터' 정렬 필터 적용
 - [ ] 상품 더 보기 버튼 클릭 시 API로 상품 불러오기
@@ -50,7 +50,7 @@ REACT, SCSS
 - [ ] MyPage
 - [x] Footer
 - [ ] header responsive
-- [ ] Main jumbo responsive
+- [x] Main jumbo responsive
 - [ ] Main Product responsive
 - [x] Login responsive
 - [ ] Detail responsive

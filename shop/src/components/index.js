@@ -1,3 +1,3 @@
 import ListItems from './ListItems';
-
-export { ListItems }
+import MainBanner from './MainBanner';
+export { ListItems, MainBanner }

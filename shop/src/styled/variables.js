@@ -1,3 +1,8 @@
+const Basic = {
+    padding: '0 2rem',
+    paddingTop: '2rem'
+}
+
 const Button = {
     border: '1px solid #dbdbdb',
     padding: '1rem 2rem',
@@ -13,4 +18,4 @@ const Strong = {
     fontWeight: '700',
     fontColor: 'tomato',
 }
-export { Button, Line, Strong };
+export { Button, Line, Strong, Basic };

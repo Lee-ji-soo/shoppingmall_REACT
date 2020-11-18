@@ -6,8 +6,6 @@ import { GuardRoute } from './guards';
 
 const App = () => {
     const logged = useSelector(({ authReducer }) => authReducer.logged);
-    console.log(logged);
-
     return (
         <BrowserRouter>
             <Header />
