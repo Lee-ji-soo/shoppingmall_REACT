@@ -40,6 +40,23 @@ app.post('/signin', (req, res) => {
     }
 })
 
+app.get('/more', (req, res) => {
+    res.send({
+        data: [
+            {
+                id: 1,
+                price: 305000,
+                src: [
+                    "https://cdn-images.farfetch-contents.com/15/33/25/66/15332566_27396036_480.jpg",
+                    "https://cdn-images.farfetch-contents.com/15/33/25/66/15332566_27395273_1000.jpg"
+                ],
+                name: "스쿱 넥 탱크 탑",
+                brand: "Totême"
+            }
+        ]
+    })
+})
+
 const server = app.listen(PORT, () => {
     `SERVER PORT on ${PORT}`
 });

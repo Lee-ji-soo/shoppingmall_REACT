@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { MainStyle, ListStyle } from '../styled';
 import { ListItems, MainBanner, SortButton, MoreButton } from '../components';
 import { sortAction } from '../actions';
+import { api } from '../utils/api';
 
 const Main = () => {
     const dispatch = useDispatch();
@@ -11,6 +12,7 @@ const Main = () => {
         low: false,
         high: false,
     })
+    const [more, setMore] = useState(0);
 
     const onSortLow = () => {
         dispatch(sortAction.onSortLow());
@@ -36,6 +38,16 @@ const Main = () => {
         }
     };
 
+    async function fetchItems() {
+        const data = await api.fetchItems();
+    }
+
+    const onLoadMore = () => {
+        if (more == 0) {
+            // fetchItems();
+        }
+    };
+
     return (
         <MainStyle>
             <MainBanner />
@@ -45,7 +57,7 @@ const Main = () => {
                     Items.map(item => <ListItems item={item} key={`item${item.id}`} />)
                 }
             </ListStyle>
-            <MoreButton />
+            <MoreButton onLoadMore={onLoadMore} />
         </MainStyle>
     )
 };
