@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { AuthAction } from '../actions';
+import { authAction } from '../actions';
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -9,7 +9,7 @@ const Header = () => {
 
     const handleLogin = () => {
         logged
-            ? dispatch(AuthAction.logout())
+            ? dispatch(authAction.logout())
             : null;
     }
 

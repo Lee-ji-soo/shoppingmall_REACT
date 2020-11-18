@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { AuthAction } from '../actions';
-import { MainStyle, LoginStyle, Warning } from '../styled/style';
+import { authAction } from '../actions';
+import { MainStyle, Warning, LoginStyle } from '../styled';
 import { EMAIL_RULE } from '../utils/const';
 import { useInput } from '../utils/useInput';
 
@@ -21,7 +21,7 @@ const Login = () => {
             alert('이메일이 형식에 맞지 않습니다.')
         } else {
             e.preventDefault();
-            dispatch(AuthAction.login({ id, password }))
+            dispatch(authAction.login({ id, password }))
             resetInput();
             return true;
         }

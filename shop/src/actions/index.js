@@ -1,3 +1,4 @@
-import { AuthAction } from './authAction';
+import { authAction } from './authAction';
+import { sortAction } from './sortAction';
 
-export { AuthAction };
+export { authAction, sortAction };

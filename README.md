@@ -19,9 +19,11 @@ REACT, SCSS
 - [x] GuardRoute로 로그인 시, 페이지 이동 
 
 #### Main
-- [x] 메인 상단 페이지 request Animation Frames (useRef)
+- [x] 메인 상단 페이지 request Animation Frames (useRef)<br>
+     - 컴포넌트에서 return()과 같은 선상에 함수를 실행하면 안된다. <br>
+     - 컴포넌트는 새로운 변화값이 있을 때마다, 지속적으로 return()함수를 실행한다. 이와 같은 선상에서 requestAnimationFrame을 실시하면, 이 함수가 중복 실행 될 위험이 있고 결국 overload될 수 있다.
 - [x] 상품 렌더
-- [ ] 상품 '낮은 순부터|높은 순부터' 정렬 필터 적용
+- [x] 상품 '낮은 순부터|높은 순부터' 정렬 필터 적용
 - [ ] 상품 더 보기 버튼 클릭 시 API로 상품 불러오기
 - [ ] 상품 클릭 시 상세페이지로 연결 > 클릭 아이디 Detail 컴포넌트로 전달
 

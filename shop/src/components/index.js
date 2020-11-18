@@ -1,3 +1,5 @@
 import ListItems from './ListItems';
 import MainBanner from './MainBanner';
-export { ListItems, MainBanner }
+import SortButton from './SortButton';
+
+export { ListItems, MainBanner, SortButton }

@@ -1,4 +1,4 @@
-import { AuthAction } from '../actions';
+import { authAction } from '../actions';
 
 const initialData = {
     auth: {},
@@ -8,13 +8,13 @@ const initialData = {
 
 const authReducer = (state = initialData, action) => {
     switch (action.type) {
-        case AuthAction.LOGIN: {
+        case authAction.LOGIN: {
             return {
                 ...state,
                 payload: action.payload
             }
         }
-        case AuthAction.LOGOUT: {
+        case authAction.LOGOUT: {
             return {
                 ...state,
                 auth: {},
@@ -22,14 +22,14 @@ const authReducer = (state = initialData, action) => {
                 failure: 0
             }
         }
-        case AuthAction.LOGIN_SUCCESS: {
+        case authAction.LOGIN_SUCCESS: {
             return {
                 ...state,
                 logged: action.valid,
                 failure: 0
             }
         }
-        case AuthAction.LOGIN_FAILURE: {
+        case authAction.LOGIN_FAILURE: {
             return {
                 ...state,
                 logged: action.valid,

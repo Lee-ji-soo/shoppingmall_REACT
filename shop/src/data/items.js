@@ -1,4 +1,4 @@
-const Items = [{
+const List = [{
     id: 1,
     price: 305000,
     src: ['https://cdn-images.farfetch-contents.com/15/33/25/66/15332566_27396036_480.jpg', 'https://cdn-images.farfetch-contents.com/15/33/25/66/15332566_27395273_1000.jpg'],
@@ -81,4 +81,4 @@ const Items = [{
 }
 ];
 
-export default Items
+export default List

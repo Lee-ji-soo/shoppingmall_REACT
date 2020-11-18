@@ -8,7 +8,7 @@ const logout = () => ({ type: LOGOUT });
 const loginSuccess = (valid) => ({ type: LOGIN_SUCCESS, valid })
 const loginFailure = (valid) => ({ type: LOGIN_FAILURE, valid })
 
-const AuthAction = {
+const authAction = {
     LOGIN,
     LOGOUT,
     LOGIN_SUCCESS,
@@ -19,4 +19,4 @@ const AuthAction = {
     loginFailure
 }
 
-export { AuthAction }
+export { authAction }
