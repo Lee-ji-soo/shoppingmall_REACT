@@ -1,6 +1,7 @@
-import { LoginStyle } from './Login';
+import { LoginStyle } from './login';
 import { MainBannerStyle } from './mainBanner'
-import { ListStyle, Item, SortButtonStyle } from './mainItem'
+import { ListStyle, Item } from './mainItem'
+import { ButtonStyle } from './button';
 import { MainStyle, FooterStyle, Warning } from './style'
 
 export {
@@ -9,7 +10,7 @@ export {
     MainBannerStyle,
     ListStyle,
     Item,
-    SortButtonStyle,
+    ButtonStyle,
     FooterStyle,
     Warning
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { MainStyle, ListStyle } from '../styled';
-import { ListItems, MainBanner, SortButton } from '../components';
+import { ListItems, MainBanner, SortButton, MoreButton } from '../components';
 import { sortAction } from '../actions';
 
 const Main = () => {
@@ -45,6 +45,7 @@ const Main = () => {
                     Items.map(item => <ListItems item={item} key={`item${item.id}`} />)
                 }
             </ListStyle>
+            <MoreButton />
         </MainStyle>
     )
 };

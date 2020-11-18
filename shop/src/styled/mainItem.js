@@ -76,23 +76,4 @@ const Item = styled.li`
     }
 `
 
-const SortButtonStyle = styled.section`
-    padding:${Basic.padding};
-    padding-top:${Basic.paddingTop};
-    padding-bottom:${Basic.paddingTop};
-    .btn{
-        cursor:pointer;
-        background-color:#fff;
-        margin-right:1rem;
-        padding:${Button.padding};
-        border-radius:${Button.radius};
-        font-size:${Button.fontSize};
-        &:hover,
-        &.active{
-            background-color:black;
-            color:white;
-        }
-    }
-`
-
-export { ListStyle, Item, SortButtonStyle }
+export { ListStyle, Item }

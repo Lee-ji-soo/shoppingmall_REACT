@@ -53,7 +53,7 @@ REACT, SCSS
 - [x] Footer
 - [ ] header responsive
 - [x] Main jumbo responsive
-- [ ] Main Product responsive
+- [x] Main Product responsive
 - [x] Login responsive
 - [ ] Detail responsive
 - [ ] Cart responsive

@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MainBannerStyle } from '../styled/mainBanner';
+import { MainBannerStyle } from '../styled';
 
 const MainBanner = () => {
     const cartRef = useRef();
+    const [turn, setTurn] = useState(false);
+
     let x = 0;
     let vx = 2;
-    const [turn, setTurn] = useState(false);
     let stageWidth = document.body.clientWidth;
 
     const resize = () => {
