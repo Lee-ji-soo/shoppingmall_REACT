@@ -28,8 +28,8 @@ REACT, SCSS
 - [x] 상품 클릭 시 상세페이지로 연결 > 클릭 아이디 Detail 컴포넌트로 전달
 
 #### Detail
-- [ ] 이미지 '다음|이전' 보기 기능
-- [ ] selection으로 수량, 색상, 사이즈 선택기능
+- [x] 이미지 '다음|이전' 보기 기능
+- [x] selection으로 수량, 색상, 사이즈 선택기능
 - [ ] 최종 선택한 selection cart페이지 전달 (reducer)
 - [ ] 'Product|info|ship' 탭 기능
 
@@ -47,7 +47,7 @@ REACT, SCSS
 - [x] Main jumbo
 - [x] Main Product
 - [x] Login
-- [ ] Detail
+- [x] Detail
 - [ ] Cart
 - [ ] MyPage
 - [x] Footer
@@ -55,6 +55,6 @@ REACT, SCSS
 - [x] Main jumbo responsive
 - [x] Main Product responsive
 - [x] Login responsive
-- [ ] Detail responsive
+- [x] Detail responsive
 - [ ] Cart responsive
 - [ ] MyPage responsive

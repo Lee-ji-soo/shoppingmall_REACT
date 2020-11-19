@@ -18,6 +18,11 @@ const Input = {
 
 const Line = {
     margin: '1rem auto',
+    marginBottom: '1rem'
+};
+
+const Txt = {
+    marginBottom: '.4rem'
 };
 
 const Strong = {
@@ -26,4 +31,4 @@ const Strong = {
     fontColor: 'tomato',
 };
 
-export { Button, Line, Strong, Basic, Input };
+export { Button, Line, Strong, Basic, Input, Txt };
