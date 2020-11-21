@@ -6,7 +6,7 @@ const Basic = {
 const Button = {
     border: '1px solid #dbdbdb',
     padding: '7px 14px',
-    radius: '8px',
+    radius: '3px',
     fontSize: '.9rem',
 };
 

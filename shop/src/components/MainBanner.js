@@ -37,15 +37,8 @@ const MainBanner = () => {
                 <section id='top-img'>
                     <img ref={cartRef} className={`shoppingCart ${turn ? '' : 'right'}`} src={`https://www.clipartkey.com/mpngs/m/197-1977444_shopping-cart-drawing.png`} />
                 </section>
-                <div className='topbanner-con'>
-                    <p className="con">
-                        This is a simple hero unit, a simple jumbotron-style component for calling
-                        extra attention to featured content or information.
-                </p>
-                    <p className="con">
-                        It uses utility classes for typography and spacing to space content out within the
-                        larger container.
-                </p>
+                <div className='top-txt'>
+                    <p className="txt">SHOPP</p>
                 </div>
             </article>
         </MainBannerStyle>

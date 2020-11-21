@@ -15,6 +15,7 @@ const Warning = styled.p`
     font-size:${Strong.fontSize};
     margin:${Line.margin};
 `
+
 const FooterStyle = styled.footer`
     width: 100%;
     height: max-content;
