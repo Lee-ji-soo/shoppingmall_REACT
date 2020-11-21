@@ -9,7 +9,7 @@ const initialData = {
 const selectReducer = (state = initialData, action) => {
     switch (action.type) {
         case selectAction.ON_QUANTITY: {
-            const nextData = action.value;
+            const nextData = Number(action.value);
             return { ...state, quantity: nextData };
         };
         case selectAction.ON_COLOR: {
