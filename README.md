@@ -32,7 +32,7 @@ REACT, SCSS
 - [x] 이미지 '다음|이전' 보기 기능
 - [x] selection으로 수량, 색상, 사이즈 선택기능
 - [x] 'Product|info|ship' 탭 기능
-- [ ] 최종 선택한 selection cart페이지 전달 (reducer)
+- [x] 최종 선택한 selection cart페이지 전달 (reducer)
 
 #### Cart
 - [ ] (각 수랑 * 가격)으로 전 상품 총합계 구하기

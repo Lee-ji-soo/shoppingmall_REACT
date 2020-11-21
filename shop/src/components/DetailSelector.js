@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectAction } from '../actions';
 
 const DetailSelector = ({ onAddCart, select }) => {
-    const selected = useSelector(({ selectReducer }) => selectReducer)
     const dispatch = useDispatch();
 
     const [data, setData] = useState({
@@ -14,16 +13,13 @@ const DetailSelector = ({ onAddCart, select }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const colors = selected.colors.length > 0 ? selected.colors : data.colors;
-        const sizes = selected.sizes.length > 0 ? selected.sizes : data.sizes;
-        onAddCart({ ...selected, colors: colors, sizes: sizes });
+        onAddCart(data);
     }
 
     const handleQuantity = e => {
         const { target: { value: value } } = e;
-        setData({ ...select, quantity: value });
+        setData({ ...select, quantity: Number(value) });
         dispatch(selectAction.onQuantity(value));
-
     }
 
     const handleColor = e => {
