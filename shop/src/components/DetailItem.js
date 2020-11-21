@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { nf } from '../utils/const';
-import { DetailInfo } from '../styled';
+import { DetailInfoStyle } from '../styled';
 import { DetailSelector } from '../components';
 
-const DetailItem = ({ item: { id, brand, src, name, price, } }) => {
+const DetailItem = ({ onAddCart, select, item: { id, brand, src, name, price, } }) => {
+
     const [imgNum, setImgNum] = useState(0);
     const imgRef = useRef();
+
     const handleButton = (e) => {
         const { target } = e;
         if (target.dataset.to === 'prev') {
@@ -19,13 +21,14 @@ const DetailItem = ({ item: { id, brand, src, name, price, } }) => {
             setImgNum(0);
         }
     };
+
     useEffect(() => {
         imgRef.current.style.transition = "all .5s ease-in-out";
         imgRef.current.style.transform = `translateX(-${imgNum}00%)`;
     }, [imgNum])
 
     return (
-        <DetailInfo>
+        <DetailInfoStyle>
             <div className='img_BOX'>
                 <div className='imgs_wrap'>
                     <div ref={imgRef} className='imgs'>
@@ -44,9 +47,9 @@ const DetailItem = ({ item: { id, brand, src, name, price, } }) => {
                     <h4 className='txt name'>{name}</h4>
                     <p className='txt price'>₩{nf.format(price)}원</p>
                 </div>
-                <DetailSelector />
+                <DetailSelector onAddCart={onAddCart} select={select} />
             </div>
-        </DetailInfo>
+        </DetailInfoStyle>
     )
 };
 
