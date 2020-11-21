@@ -3,7 +3,7 @@ import { nf } from '../utils/const';
 import { DetailInfoStyle } from '../styled';
 import { DetailSelector } from '../components';
 
-const DetailItem = ({ onAddCart, select, item: { id, brand, src, name, price, } }) => {
+const DetailItem = ({ onAddCart, select, item: { brand, src, name, price, } }) => {
 
     const [imgNum, setImgNum] = useState(0);
     const imgRef = useRef();
