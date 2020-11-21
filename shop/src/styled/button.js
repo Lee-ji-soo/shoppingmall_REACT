@@ -4,7 +4,7 @@ import { Basic, Button } from './variables';
 const ButtonStyle = styled.section`
     padding:${Basic.padding};
     padding-top:${Basic.paddingTop};
-    padding-bottom:${Basic.paddingTop};
+    padding-bottom:50px;
     .btn{
         cursor:pointer;
         background-color:#fff;
