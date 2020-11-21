@@ -4,8 +4,9 @@ import SortButton from './SortButton';
 import MoreButton from './MoreButton';
 import DetailItem from './DetailItem';
 import DetailSelector from './DetailSelector';
+import DetailTab from './DetailTab';
 
 export {
     ListItems, MainBanner, SortButton, MoreButton,
-    DetailItem, DetailSelector
+    DetailItem, DetailSelector, DetailTab
 }

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Basic, Button, Line, Txt } from './variables';
 
-const DetailInfo = styled.div`
+const DetailInfoStyle = styled.div`
     display:flex;
     justify-content:center;
     margin-bottom:${Basic.paddingTop};
@@ -45,7 +45,7 @@ const DetailInfo = styled.div`
         }
     }
     .info_BOX{
-        width:400px;
+        width:350px;
         margin-left:2rem;
         .info_wrap{
             height:160px;
@@ -124,4 +124,45 @@ const DetailInfo = styled.div`
  }
 `
 
-export { DetailInfo };
+const TabStyle = styled.section`
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    .tab_wrap{
+        ul{
+            display: flex;
+            flex-direction: row;
+            text-align:center;
+            cursor:pointer;
+            .tab_btn{
+                width:100%;
+                height:20%;
+                padding:${Button.padding};
+                text-decoration: none;
+                color:grey;
+                border-bottom:${Button.border};
+                &.orange{
+                    border-top: 2px solid orange;
+                    border-right: 1px solid #ccc;
+                    border-bottom: 1px solid white;
+                    border-left: 1px solid #ccc;
+                    color: orange;
+                    margin-top: -2px;
+                }
+            }
+        }
+    }
+    .con_wrap{
+        .tab_content{
+            display: none;
+            height:100px;
+            padding:1rem;
+            &.show{
+                display: block;
+            }
+        }
+    }
+`
+export { DetailInfoStyle, TabStyle };
