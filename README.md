@@ -35,6 +35,7 @@ REACT, SCSS
 - [x] 최종 선택한 selection cart페이지 전달 (reducer)
 
 #### Cart
+- [x] cart Reducer 에서 저장된 cart 내역 카트 페이지에 랜더
 - [ ] (각 수랑 * 가격)으로 전 상품 총합계 구하기
 - [ ] 수량 변경 시 수량 변경 확인 문구창 띄우기
 - [ ] 수량 변경 확인 시 전 상품 총합계 재출력

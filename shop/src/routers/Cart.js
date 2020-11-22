@@ -1,9 +1,20 @@
 import React from 'react';
-import { MainStyle } from '../styled/style';
+import { MainStyle, ListStyle } from '../styled';
+import { useSelector } from 'react-redux';
+import { CartItems } from '../components';
 
 const Cart = () => {
+    const Items = useSelector(({ cartReducer }) => cartReducer.cartItems);
     return (
-        <MainStyle>Cart</MainStyle>
+        <MainStyle>
+            <ListStyle>
+                {
+                    Items.map(item =>
+                        <CartItems key={`cartItems${item.id}`} item={item} />
+                    )
+                }
+            </ListStyle>
+        </MainStyle>
     )
 };
 

@@ -2,7 +2,7 @@ import { authAction } from '../actions';
 
 const initialData = {
     auth: {},
-    logged: false,
+    logged: true, // 실제 : false로 고쳐쓰기
     failure: 0
 }
 
