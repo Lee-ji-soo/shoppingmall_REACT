@@ -1,19 +1,42 @@
 import React from 'react';
-import { MainStyle, ListStyle } from '../styled';
+import { MainStyle, CartStyle, SumStyle, CartItemStyle } from '../styled';
 import { useSelector } from 'react-redux';
-import { CartItems } from '../components';
+import { CartItem } from '../components';
+import { nf } from '../utils/const';
 
 const Cart = () => {
     const Items = useSelector(({ cartReducer }) => cartReducer.cartItems);
+
+    const price = Items.reduce((acc, cur) => {
+        console.log(acc, cur.price);
+        return acc + cur.price;
+    }, 0);
+
     return (
         <MainStyle>
-            <ListStyle>
-                {
-                    Items.map(item =>
-                        <CartItems key={`cartItems${item.id}`} item={item} />
-                    )
-                }
-            </ListStyle>
+            <CartStyle>
+                <div className='cartpage_wrap'>
+                    <CartItemStyle className='cartItems_wrap'>
+                        <h4>MY CART</h4>
+                        {
+                            Items.map(item =>
+                                <CartItem key={`cartItem${item.id}`} item={item} />
+                            )
+                        }
+                    </CartItemStyle>
+                    <SumStyle className='sum_wrap'>
+                        <h4>TOTAL</h4>
+                        <p>
+                            <span className='tt'>총합</span>
+                            <span className='con'>{nf.format(price)}원</span>
+                        </p>
+                        <p>
+                            <span className='tt'>배송</span>
+                            <span className='con'>ℹ︎</span>
+                        </p>
+                    </SumStyle>
+                </div>
+            </CartStyle>
         </MainStyle>
     )
 };
