@@ -1,21 +1,20 @@
 import React from 'react';
 import { nf } from '../utils/const';
 
-const CartItem = ({ onDelete, item, item: { src, brand, name, price } }) => {
-    console.log(item)
+const CartItem = ({ onDelete, item: { id, src, brand, name, price } }) => {
     return (
         <li>
             <div className="img_wrap">
                 <img src={src} />
             </div>
             <div className="detail_wrap">
-                <div className='brand'>{brand}</div>
-                <div className='name'>{name}</div>
-                <div className="price">{nf.format(price)}원</div>
+                <p className='brand'>{brand}</p>
+                <p className='name'>{name}</p>
+                <p className="price">{nf.format(price)}원</p>
                 <form className='cart-form'>
                     <div className='form'>
                         <label htmlFor='size'>사이즈:</label>
-                        <select name='size' className="form-control size-form-control select-size">
+                        <select name='size'>
                             <option>S</option>
                             <option>M</option>
                             <option>L</option>
@@ -23,7 +22,7 @@ const CartItem = ({ onDelete, item, item: { src, brand, name, price } }) => {
                     </div>
                     <div className='form'>
                         <label htmlFor='quantity'>수량:</label>
-                        <select data-id="${sample.id}" data-price='${sample.priceset}' className="form-control quantity-form-control select-quantity"
+                        <select data-id="${sample.id}" data-price='${sample.priceset}'
                             name='quantity'>
                             <option>1</option>
                             <option>2</option>
@@ -35,7 +34,7 @@ const CartItem = ({ onDelete, item, item: { src, brand, name, price } }) => {
                     </div>
                 </form>
             </div>
-            <button className="cart_delte-btn" onClick={onDelete}>
+            <button className="cart_delte-btn" onClick={() => { onDelete(id) }}>
                 <div>
                     <i className="cart_delete-icon">X</i>
                 </div>

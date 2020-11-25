@@ -40,6 +40,12 @@ const cartReducer = (state = initialData, action) => {
                 ...state, cartItems: nextData
             }
         }
+        case cartAction.ON_DELETE: {
+            const nextData = state.cartItems.filter(item => item.id !== action.id);
+            return {
+                ...state, cartItems: nextData
+            }
+        }
         default: return state;
     };
 

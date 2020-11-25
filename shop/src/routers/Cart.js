@@ -1,16 +1,21 @@
 import React from 'react';
 import { MainStyle, CartStyle, SumStyle, CartItemStyle } from '../styled';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { CartItem } from '../components';
 import { nf } from '../utils/const';
+import { cartAction } from '../actions';
 
 const Cart = () => {
+    const dispatch = useDispatch();
     const Items = useSelector(({ cartReducer }) => cartReducer.cartItems);
 
     const price = Items.reduce((acc, cur) => {
-        console.log(acc, cur.price);
         return acc + cur.price;
     }, 0);
+
+    const onDelete = (id) => {
+        dispatch(cartAction.onDelete(id));
+    }
 
     return (
         <MainStyle>
@@ -20,7 +25,7 @@ const Cart = () => {
                         <h4>MY CART</h4>
                         {
                             Items.map(item =>
-                                <CartItem key={`cartItem${item.id}`} item={item} />
+                                <CartItem key={`cartItem${item.id}`} onDelete={onDelete} item={item} />
                             )
                         }
                     </CartItemStyle>
