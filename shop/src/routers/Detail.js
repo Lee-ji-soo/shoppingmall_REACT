@@ -13,6 +13,10 @@ const Detail = () => {
 
     const [select, setSelect] = useState({
         id: item.id,
+        brand: item.brand,
+        name: item.name,
+        price: item.price,
+        src: item.src[0],
         quantity: 1,
         colors: item.colors,
         sizes: item.sizes,
