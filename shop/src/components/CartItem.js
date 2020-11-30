@@ -1,7 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { nf } from '../utils/const';
 
-const CartItem = ({ handleDelete, item: { id, src, brand, name, price } }) => {
+const CartItem = ({ item: { id, src, brand, name, price } }) => {
+
+    const [confirmDelete, setConfirmDelete] = useState(false);
+
+    const handleDelete = (e) => {
+        const { currentTarget } = e;
+        const $currentLI = currentTarget.closest(`li`);
+        const $confirmNode = $currentLI.querySelector('#deleteOrNot');
+        setConfirmDelete(true);
+        if (setConfirmDelete) {
+            $confirmNode.style.visibility = 'visible';
+            $confirmNode.style.opacity = '1';
+        }
+    }
 
     return (
         <li>

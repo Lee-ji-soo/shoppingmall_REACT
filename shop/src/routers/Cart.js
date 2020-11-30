@@ -1,31 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { MainStyle, CartStyle, SumStyle, CartItemStyle } from '../styled';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { CartItem } from '../components';
 import { nf } from '../utils/const';
 
 const Cart = () => {
-    const dispatch = useDispatch();
-    const [confirmDelete, setConfirmDelete] = useState(false);
     const Items = useSelector(({ cartReducer }) => cartReducer.cartItems);
 
     const price = Items.reduce((acc, cur) => {
         return acc + cur.price;
     }, 0);
-
-    const handleDelete = (e) => {
-        const { currentTarget } = e;
-        const $currentLI = currentTarget.closest(`li`);
-        const $confirmNode = $currentLI.querySelector('#deleteOrNot');
-        setConfirmDelete(true);
-        if (setConfirmDelete) {
-            $confirmNode.style.visibility = 'visible';
-            $confirmNode.style.opacity = '1';
-        }
-    }
-
-    useEffect(() => {
-    }, [])
 
     return (
         <MainStyle>
@@ -37,7 +21,7 @@ const Cart = () => {
                             Items.map((item, i) =>
                                 <CartItem
                                     id={`cartItem${item.id}`}
-                                    key={`cartItem${item.id}`} handleDelete={handleDelete}
+                                    key={`cartItem${item.id}`}
                                     item={item} />
                             )
                         }
