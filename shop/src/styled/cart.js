@@ -86,8 +86,6 @@ const CartItemStyle = styled.ul`
 
             width:100%;
             height:100%;
-            top:0;
-            left:0;
 
             display:flex;
             flex-direction:column;
@@ -99,13 +97,14 @@ const CartItemStyle = styled.ul`
             transition: all ease .5s;
             opacity: 0;
             visibility: hidden;
-            
+
             .txt{
                 font-size: 1rem;
                 color: black;
                 padding:${Basic.paddignTop};
             }
             button {
+                cursor:pointer;
                 outline: none;
                 background: #fff;
                 color: black;
@@ -120,13 +119,7 @@ const CartItemStyle = styled.ul`
                     border:2px solid tomato;
                 }
             }
-            .go {
-                color: #fff;
-                background-color: black;
-                border-radius: 4px;
-                margin-right: 10px;
-            }
-            &.displayBlock {
+            &.visible {
                 opacity: 1;
                 visibility: visible;
                 transform: translateY(0rem);

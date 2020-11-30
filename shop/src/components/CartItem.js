@@ -1,20 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { nf } from '../utils/const';
 
-const CartItem = ({ item: { id, src, brand, name, price } }) => {
-
+const CartItem = ({ deleteItem, item: { id, src, brand, name, price } }) => {
     const [confirmDelete, setConfirmDelete] = useState(false);
 
-    const handleDelete = (e) => {
-        const { currentTarget } = e;
-        const $currentLI = currentTarget.closest(`li`);
-        const $confirmNode = $currentLI.querySelector('#deleteOrNot');
+    const handleDelete = () => {
         setConfirmDelete(true);
-        if (setConfirmDelete) {
-            $confirmNode.style.visibility = 'visible';
-            $confirmNode.style.opacity = '1';
-        }
-    }
+    };
+
+    const confirmGo = (id) => {
+        deleteItem(id);
+    };
+
+    const confirmNo = () => {
+        setConfirmDelete(false);
+    };
+
+    const handleDeleteConfirm = (e, id) => {
+        const { target: { dataset: { confirm } } } = e;
+        confirm === 'go' ? confirmGo(id) : confirmNo();
+    };
+
+    useEffect(() => {
+    }, [confirmDelete])
 
     return (
         <li>
@@ -49,19 +57,23 @@ const CartItem = ({ item: { id, src, brand, name, price } }) => {
                 </form>
             </div>
             <button data-item={`cartItem${id}`} className="cart_delte-btn"
-                onClick={(e) => { handleDelete(e) }}>X</button>
-            <div id="deleteOrNot" className='confirmWindow'>
+                onClick={handleDelete}>X</button>
+            <div id="deleteOrNot" className={`confirmWindow ${confirmDelete ? 'visible' : ''}`}>
                 <p className="txt">상품을 삭제하시겠습니까?</p>
                 <div className='confirm_btn'>
-                    <button className="confirm-go">삭제</button>
-                    <button className="confirm-no">취소</button>
+                    <button data-confirm='go'
+                        onClick={(e) => { handleDeleteConfirm(e, id) }}>삭제</button>
+                    <button data-confirm='no'
+                        onClick={handleDeleteConfirm}>취소</button>
                 </div>
             </div>
             <div id="changeOrNot" className='confirmWindow'>
                 <p className="txt">수량을 변경하시겠습니까?</p>
                 <div className='confirm_btn'>
-                    <button className="confirm-go">변경</button>
-                    <button className="confirm-no">취소</button>
+                    <button className="go"
+                    >변경</button>
+                    <button className="no"
+                    >취소</button>
                 </div>
             </div>
         </li>
