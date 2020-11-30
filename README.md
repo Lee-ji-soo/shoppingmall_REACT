@@ -51,7 +51,7 @@ REACT, SCSS
 - [x] Main Product
 - [x] Login
 - [x] Detail
-- [ ] Cart
+- [x] Cart
 - [ ] MyPage
 - [x] Footer
 - [ ] header responsive
@@ -59,5 +59,5 @@ REACT, SCSS
 - [x] Main Product responsive
 - [x] Login responsive
 - [x] Detail responsive
-- [ ] Cart responsive
+- [x] Cart responsive
 - [ ] MyPage responsive

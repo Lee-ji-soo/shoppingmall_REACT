@@ -20,6 +20,17 @@ const CartStyle = styled.div`
             padding:1rem 0;
         }
     }
+    @media (max-width:758px){
+        .cartpage_wrap{
+            width:90%;
+            margin:0 auto;
+            flex-direction:column;
+            .cartItems_wrap,
+            .sum_wrap{
+                padding: 0;
+            }
+        }
+    }
 `
 
 const CartItemStyle = styled.ul`
@@ -31,8 +42,8 @@ const CartItemStyle = styled.ul`
         position:relative;
         border-bottom: 1px solid #ededed;
         width: 100%;
-        height:150px;
-        padding-bottom:${Basic.paddingTop};
+        height:200px;
+        padding-bottom:1rem;
         margin:${Line.margin};
         .img_wrap{
             width:25%; 
@@ -43,15 +54,21 @@ const CartItemStyle = styled.ul`
         .detail_wrap {
             position:absolute;
             width: 50%;
-            left:25%;
+            left:30%;
             display: flex;
             line-height: 30px;
             flex-direction: column;
-            .name {
-                font-size: 1.1rem;
+            .brand{
+                font-size: .9rem;
                 font-weight: 600;
             }
+            .name {
+                font-size: 1.1rem;
+                font-weight: 300;
+                line-height:1.3rem;
+            }
             .price {
+                padding-top:2rem;
                 font-size: 1.1rem;
                 font-weight: 700;
                 color: #333;
@@ -59,11 +76,12 @@ const CartItemStyle = styled.ul`
             .cart-form{
                 padding-top:1rem;
                 display:flex;
-                .select{
+                flex-direction:column;
+                label{
+                }
+                select{
                     border:none;
-                    padding:.1rem;
-                    padding-right:.3rem;
-                    margin-right:1rem;
+                    text-align:left;
                     font-size:1rem;
                 }
             }
@@ -126,6 +144,9 @@ const CartItemStyle = styled.ul`
             }
         }
     }
+    @media (max-width:758px){
+        width:100%;
+        }
 `
 
 const SumStyle = styled.div`
@@ -146,6 +167,10 @@ const SumStyle = styled.div`
             width:60%;
             font-weight:700;
         }
+    }
+    @media (max-width:758px){
+        width:100%;
+        margin-bottom:${Basic.paddingTop};
     }
 `
 
