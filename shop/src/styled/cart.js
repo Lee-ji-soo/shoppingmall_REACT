@@ -81,7 +81,7 @@ const CartItemStyle = styled.ul`
                 color:tomato
             }
         } 
-        .changeOrNot {
+        .confirmWindow {
             position: absolute;
 
             width:100%;
@@ -99,6 +99,7 @@ const CartItemStyle = styled.ul`
             transition: all ease .5s;
             opacity: 0;
             visibility: hidden;
+            
             .txt{
                 font-size: 1rem;
                 color: black;
@@ -130,8 +131,7 @@ const CartItemStyle = styled.ul`
                 visibility: visible;
                 transform: translateY(0rem);
             }
-    }
-
+        }
     }
 `
 

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { nf } from '../utils/const';
 
-const CartItem = ({ onDelete, item: { id, src, brand, name, price } }) => {
+const CartItem = ({ handleDelete, item: { id, src, brand, name, price } }) => {
+
     return (
         <li>
             <div className="img_wrap">
@@ -34,12 +35,16 @@ const CartItem = ({ onDelete, item: { id, src, brand, name, price } }) => {
                     </div>
                 </form>
             </div>
-            <button className="cart_delte-btn" onClick={() => { onDelete(id) }}>
-                <div>
-                    <i className="cart_delete-icon">X</i>
+            <button data-item={`cartItem${id}`} className="cart_delte-btn"
+                onClick={(e) => { handleDelete(e) }}>X</button>
+            <div id="deleteOrNot" className='confirmWindow'>
+                <p className="txt">상품을 삭제하시겠습니까?</p>
+                <div className='confirm_btn'>
+                    <button className="confirm-go">삭제</button>
+                    <button className="confirm-no">취소</button>
                 </div>
-            </button>
-            <div id="changeOrNot" className="changeOrNot">
+            </div>
+            <div id="changeOrNot" className='confirmWindow'>
                 <p className="txt">수량을 변경하시겠습니까?</p>
                 <div className='confirm_btn'>
                     <button className="confirm-go">변경</button>
