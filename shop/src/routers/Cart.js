@@ -9,13 +9,15 @@ const Cart = () => {
     const dispatch = useDispatch();
     const Items = useSelector(({ cartReducer }) => cartReducer.cartItems);
     const price = Items.reduce((acc, cur) => {
-        return acc + cur.price;
+        return acc + (cur.price) * (cur.quantity);
     }, 0);
 
     const deleteItem = (id) => {
         dispatch(cartAction.onDelete(id));
     };
-
+    const changeQuantity = (value, id) => {
+        dispatch(cartAction.onChangeQuantity({ value, id }));
+    };
     useEffect(() => {
     }, [])
 
@@ -31,6 +33,7 @@ const Cart = () => {
                                     id={`cartItem${item.id}`}
                                     key={`cartItem${item.id}`}
                                     deleteItem={deleteItem}
+                                    changeQuantity={changeQuantity}
                                     item={item}
                                 />
                             )
