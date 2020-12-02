@@ -9,6 +9,10 @@ const MainStyle = styled.section`
     list-style-type:none;
 `
 
+const NoScrollpage = styled.div`
+    height:75vh;
+`
+
 const Warning = styled.p`
     font-weight:${Strong.fontWeight};
     color:${Strong.fontColor};
@@ -36,4 +40,4 @@ const FooterStyle = styled.footer`
     }
 `
 
-export { MainStyle, FooterStyle, Warning }
+export { MainStyle, NoScrollpage, FooterStyle, Warning }

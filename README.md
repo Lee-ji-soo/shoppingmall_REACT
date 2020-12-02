@@ -42,7 +42,7 @@ REACT, SCSS
 - [x] (각 수랑 * 가격)으로 전 상품 총합계 구하기
 
 #### MyPage
-- [ ] 포멧 (이름, 이메일, 전화번호, 주소)
+- [x] 포멧 (이름, 이메일, 전화번호, 주소)
 - [ ] 주소 API 연동
 
 ### SCSS
@@ -52,7 +52,7 @@ REACT, SCSS
 - [x] Login
 - [x] Detail
 - [x] Cart
-- [ ] MyPage
+- [x] MyPage
 - [x] Footer
 - [ ] header responsive
 - [x] Main jumbo responsive
@@ -60,4 +60,4 @@ REACT, SCSS
 - [x] Login responsive
 - [x] Detail responsive
 - [x] Cart responsive
-- [ ] MyPage responsive
+- [x] MyPage responsive
