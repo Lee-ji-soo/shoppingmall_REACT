@@ -6,7 +6,8 @@ import { Juso } from '../components';
 
 const Mypage = () => {
     const user = useSelector(({ mypageReducer }) => mypageReducer.user);
-    const { name, mail, phone, juso } = user;
+    const { name, mail, phone } = user;
+    const [juso, setJuso] = useState(user.juso);
     const [keyword, setKeyword] = useState('');
     const [keyword2, setKeyword2] = useState('');
     const [page, setPage] = useState(1);
@@ -26,6 +27,11 @@ const Mypage = () => {
     const handleInput = (e) => {
         const { target: { value } } = e;
         setKeyword(value);
+    };
+
+    const handleClickJuso = (nextAddr) => {
+
+        setJuso(nextAddr);
     };
 
     const handleSearchJuso = (e) => {
@@ -65,6 +71,7 @@ const Mypage = () => {
                         keyword={keyword}
                         keyword2={keyword2}
                         handleInput={handleInput}
+                        handleClickJuso={handleClickJuso}
                         handleSearchJuso={handleSearchJuso}
                         total={total}
                         page={page}

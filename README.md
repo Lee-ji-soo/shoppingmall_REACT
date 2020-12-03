@@ -44,7 +44,7 @@ REACT, SCSS
 #### MyPage
 - [x] 포멧 (이름, 이메일, 전화번호, 주소)
 - [x] 주소 API 연동
-- [ ] 주소 선택 시, My page의 주소로 변경
+- [x] 주소 선택 시, My page의 주소로 변경
 
 ### SCSS
 - [x] Header

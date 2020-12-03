@@ -1,9 +1,10 @@
 import React from 'react';
 import { ButtonStyle, JusoStyle } from '../styled';
 
-const Juso = ({ keyword, keyword2, handleInput, handleSearchJuso, total, page, onPrev, onNext, list }) => {
+const Juso = ({ keyword, keyword2, handleInput, handleClickJuso, handleSearchJuso, total, page, onPrev, onNext, list }) => {
     return (
         <JusoStyle className={`juso_wrap`}>
+            <h2>도로명 검색</h2>
             <div className='input'>
                 <input value={keyword} onChange={handleInput} />
                 <ButtonStyle onClick={handleSearchJuso}>검색</ButtonStyle>
@@ -15,7 +16,7 @@ const Juso = ({ keyword, keyword2, handleInput, handleSearchJuso, total, page, o
             }
             <ul>
                 {list.map((li, index) =>
-                    <li key={`juso${index}`} >
+                    <li onClick={() => { handleClickJuso(li.roadAddr) }} key={`juso${index}`} >
                         <p>{li.roadAddr}</p>
                     </li>
                 )}
