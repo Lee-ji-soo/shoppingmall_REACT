@@ -1,9 +1,10 @@
 import React from 'react';
 import { ButtonStyle, JusoStyle } from '../styled';
 
-const Juso = ({ keyword, keyword2, handleInput, handleClickJuso, handleSearchJuso, total, page, onPrev, onNext, list }) => {
+const Juso = ({ openJuso, keyword, keyword2, handleInput, handleClose, handleClickJuso, handleSearchJuso, total, page, onPrev, onNext, list }) => {
     return (
-        <JusoStyle className={`juso_wrap`}>
+        <JusoStyle className={`${openJuso ? 'visible' : ''} juso_wrap`}>
+            <ButtonStyle onClick={handleClose}>X</ButtonStyle>
             <h2>도로명 검색</h2>
             <div className='input'>
                 <input value={keyword} onChange={handleInput} />

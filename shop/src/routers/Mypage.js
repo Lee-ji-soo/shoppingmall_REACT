@@ -13,15 +13,22 @@ const Mypage = () => {
     const [page, setPage] = useState(1);
     const [list, setList] = useState([]);
     const [total, setTotal] = useState(0);
+    const [openJuso, setOpenJuso] = useState(false);
 
     const onNext = (e) => {
-        e.preventDefault();
         setPage(page + 1);
     };
 
     const onPrev = (e) => {
-        e.preventDefault();
         setPage(page - 1);
+    };
+
+    const handleOpen = () => {
+        setOpenJuso(true)
+    };
+
+    const handleClose = () => {
+        setOpenJuso(false)
     };
 
     const handleInput = (e) => {
@@ -30,12 +37,11 @@ const Mypage = () => {
     };
 
     const handleClickJuso = (nextAddr) => {
-
         setJuso(nextAddr);
+        setOpenJuso(false)
     };
 
     const handleSearchJuso = (e) => {
-        e.preventDefault();
         setKeyword2(keyword);
         fetchJuso();
     }
@@ -68,9 +74,11 @@ const Mypage = () => {
                 <FormStyle>
                     <h3>{name}<span>님, 안녕하세요!</span></h3>
                     <Juso
+                        openJuso={openJuso}
                         keyword={keyword}
                         keyword2={keyword2}
                         handleInput={handleInput}
+                        handleClose={handleClose}
                         handleClickJuso={handleClickJuso}
                         handleSearchJuso={handleSearchJuso}
                         total={total}
@@ -90,7 +98,7 @@ const Mypage = () => {
                         <div className='juso_form'>
                             <div className='txt type'>주소</div>
                             <span className='txt con'>{juso}
-                                <ButtonStyle>변경</ButtonStyle>
+                                <ButtonStyle onClick={handleOpen}>변경</ButtonStyle>
                             </span>
                         </div>
                     </div>
