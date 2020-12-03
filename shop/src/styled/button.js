@@ -1,22 +1,17 @@
 import styled from 'styled-components';
-import { Basic, Button } from './variables';
+import { Button } from './variables';
 
-const ButtonStyle = styled.section`
-    padding:${Basic.padding};
-    padding-top:${Basic.paddingTop};
-    padding-bottom:50px;
-    .btn{
+const ButtonStyle = styled.button`
         cursor:pointer;
-        background-color:#fff;
-        margin-right:1rem;
         padding:${Button.padding};
+        margin-left:30px;
         border-radius:${Button.radius};
+        border:${Button.border};
+        background-color:${Button.backgroundColor};
         font-size:${Button.fontSize};
-        &:hover,
-        &.active{
-            background-color:black;
-            color:white;
+        &:hover{
+            color:#fff;
+            background-color:#333;
         }
-    }
 `
 export { ButtonStyle };

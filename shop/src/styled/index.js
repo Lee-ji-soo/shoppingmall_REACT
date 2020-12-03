@@ -3,7 +3,7 @@ import { MainBannerStyle } from './mainBanner'
 import { ListStyle, Item } from './mainItem'
 import { ButtonStyle } from './button';
 import { FormStyle } from './form';
-import { MainStyle, NoScrollpage, FooterStyle, Warning } from './style'
+import { MainStyle, NoScrollpage, FooterStyle, Warning, MarginStyle } from './style'
 import { DetailInfoStyle, TabStyle } from './detail';
 import { CartStyle, CartItemStyle, SumStyle } from './cart';
 
@@ -13,7 +13,7 @@ export {
     ListStyle, Item,
     ButtonStyle,
     FormStyle,
-    MainStyle, NoScrollpage, FooterStyle, Warning,
+    MainStyle, NoScrollpage, FooterStyle, Warning, MarginStyle,
     DetailInfoStyle, TabStyle,
     CartStyle, CartItemStyle, SumStyle,
 }

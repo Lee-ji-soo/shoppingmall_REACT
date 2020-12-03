@@ -1,11 +1,11 @@
 import React from 'react';
-import { ButtonStyle } from '../styled';
+import { ButtonStyle, MarginStyle } from '../styled';
 
 const MoreButton = ({ onLoadMore }) => {
     return (
-        <ButtonStyle>
-            <button className="btn" onClick={onLoadMore}>상품 더보기</button>
-        </ButtonStyle>
+        <MarginStyle>
+            <ButtonStyle className="btn" onClick={onLoadMore}>상품 더보기</ButtonStyle>
+        </MarginStyle>
     )
 };
 

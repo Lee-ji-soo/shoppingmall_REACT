@@ -9,6 +9,9 @@ const MainStyle = styled.section`
     list-style-type:none;
 `
 
+const MarginStyle = styled.div`
+    margin: 2rem 0; 
+`
 const NoScrollpage = styled.div`
     height:75vh;
 `
@@ -40,4 +43,4 @@ const FooterStyle = styled.footer`
     }
 `
 
-export { MainStyle, NoScrollpage, FooterStyle, Warning }
+export { MainStyle, NoScrollpage, FooterStyle, Warning, MarginStyle }
