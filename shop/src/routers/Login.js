@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { authAction } from '../actions';
-import { MainStyle, Warning, LoginStyle } from '../styled';
+import { MainStyle, Warning, LoginStyle, InputStyle } from '../styled';
 import { EMAIL_RULE } from '../utils/const';
 import { useInput } from '../utils/useInput';
 
@@ -37,12 +37,12 @@ const Login = () => {
             <LoginStyle>
                 <h4 id="modal_title">로그인하세요</h4>
                 <form id='input-form' onSubmit={handleSubmit}>
-                    <div className="input">
+                    <InputStyle className="input">
                         <input value={id} onChange={onInputId}
                             type="email" placeholder="이메일을 입력하세요" />
                         <input value={password} onChange={onInputPassword}
                             type="password" placeholder="비밀번호를 입력하세요" />
-                    </div>
+                    </InputStyle>
                     <div className="submit">
                         <button id='submit-btn'>Submit</button>
                     </div>

@@ -11,21 +11,6 @@ const LoginStyle = styled.section`
         }
         #input-form {
             position:relative;
-            .input{
-                input[type=email],
-                input[type=password]{
-                    display: block;
-                    margin:${Line.margin};
-                    width: 100%;
-                    padding: ${Input.padding};
-                    box-sizing: border-box;
-                    border: ${Input.border};
-                    border-radius:${Input.radius};
-                    font-size: 1.1rem;
-                    font-weight: bold;
-                    text-align: center;
-                    }
-            }
             .submit{
                 button{
                     cursor:pointer;
