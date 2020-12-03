@@ -43,7 +43,8 @@ REACT, SCSS
 
 #### MyPage
 - [x] 포멧 (이름, 이메일, 전화번호, 주소)
-- [ ] 주소 API 연동
+- [x] 주소 API 연동
+- [ ] 주소 선택 시, My page의 주소로 변경
 
 ### SCSS
 - [x] Header
@@ -53,6 +54,7 @@ REACT, SCSS
 - [x] Detail
 - [x] Cart
 - [x] MyPage
+- [ ] MyPage Juso
 - [x] Footer
 - [ ] header responsive
 - [x] Main jumbo responsive
@@ -61,3 +63,5 @@ REACT, SCSS
 - [x] Detail responsive
 - [x] Cart responsive
 - [x] MyPage responsive
+- [ ] MyPage Juso responsive
+
