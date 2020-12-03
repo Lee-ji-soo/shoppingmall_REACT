@@ -13,12 +13,23 @@ const Mypage = () => {
     const [list, setList] = useState([]);
     const [total, setTotal] = useState(0);
 
+    const onNext = (e) => {
+        e.preventDefault();
+        setPage(page + 1);
+    };
+
+    const onPrev = (e) => {
+        e.preventDefault();
+        setPage(page - 1);
+    };
+
     const handleInput = (e) => {
         const { target: { value } } = e;
         setKeyword(value);
     };
 
-    const handleSearchJuso = () => {
+    const handleSearchJuso = (e) => {
+        e.preventDefault();
         setKeyword2(keyword);
         fetchJuso();
     }
@@ -56,6 +67,9 @@ const Mypage = () => {
                         handleInput={handleInput}
                         handleSearchJuso={handleSearchJuso}
                         total={total}
+                        page={page}
+                        onNext={onNext}
+                        onPrev={onPrev}
                         list={list} />
                     <div className='info_wrap'>
                         <div>

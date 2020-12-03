@@ -6,6 +6,7 @@ import { FormStyle, InputStyle } from './form';
 import { MainStyle, NoScrollpage, FooterStyle, Warning, MarginStyle } from './style'
 import { DetailInfoStyle, TabStyle } from './detail';
 import { CartStyle, CartItemStyle, SumStyle } from './cart';
+import { JusoStyle } from './juso';
 
 export {
     LoginStyle,
@@ -16,4 +17,5 @@ export {
     MainStyle, NoScrollpage, FooterStyle, Warning, MarginStyle,
     DetailInfoStyle, TabStyle,
     CartStyle, CartItemStyle, SumStyle,
+    JusoStyle
 }

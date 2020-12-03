@@ -1,9 +1,9 @@
 import React from 'react';
-import { ButtonStyle } from '../styled';
+import { ButtonStyle, JusoStyle } from '../styled';
 
-const Juso = ({ keyword, keyword2, handleInput, handleSearchJuso, total, list }) => {
+const Juso = ({ keyword, keyword2, handleInput, handleSearchJuso, total, page, onPrev, onNext, list }) => {
     return (
-        <div className={`juso_wrap`}>
+        <JusoStyle className={`juso_wrap`}>
             <div className='input'>
                 <input value={keyword} onChange={handleInput} />
                 <ButtonStyle onClick={handleSearchJuso}>검색</ButtonStyle>
@@ -16,12 +16,22 @@ const Juso = ({ keyword, keyword2, handleInput, handleSearchJuso, total, list })
             <ul>
                 {list.map((li, index) =>
                     <li key={`juso${index}`} >
-                        <p>{li.jibunAddr}</p>
                         <p>{li.roadAddr}</p>
                     </li>
                 )}
             </ul>
-        </div>
+            {   <p>{list.length > 1 ? page : 0}페이지</p>}
+            {
+                page > 1
+                    ? (<button onClick={onPrev}>prev</button>)
+                    : null
+            }
+            {
+                page >= Math.ceil(total / 10)
+                    ? null
+                    : (<button onClick={onNext}>next</button>)
+            }
+        </JusoStyle>
     )
 };
 
