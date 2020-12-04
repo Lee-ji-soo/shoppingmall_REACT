@@ -1,7 +1,9 @@
 const Basic = {
     padding: '0 2rem',
+    paddingAround: '1rem',
     paddingTop: '4rem',
-    midPaddingTop: '2rem'
+    midPaddingTop: '2rem',
+    lowPaddingTop: '1rem'
 };
 
 const Button = {
@@ -20,7 +22,8 @@ const Input = {
 
 const Line = {
     margin: '1rem 0',
-    marginBottom: '1rem'
+    marginBottom: '1rem',
+    marginMidBottom: '0.5rem',
 };
 
 const Txt = {
