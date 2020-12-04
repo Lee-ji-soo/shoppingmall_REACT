@@ -29,6 +29,7 @@ const Mypage = () => {
 
     const handleClose = () => {
         setOpenJuso(false)
+        refreshState();
     };
 
     const handleInput = (e) => {
@@ -48,6 +49,11 @@ const Mypage = () => {
 
     const refreshInput = () => {
         setKeyword('');
+    }
+
+    const refreshState = () => {
+        setTotal(0);
+        setList([]);
     }
 
     async function fetchJuso() {
