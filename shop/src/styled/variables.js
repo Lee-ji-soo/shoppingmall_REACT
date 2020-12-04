@@ -1,6 +1,8 @@
 const Basic = {
     padding: '0 2rem',
+    lowPadding: '0 1rem',
     paddingAround: '1rem',
+    height: '2.8rem',
     paddingTop: '4rem',
     midPaddingTop: '2rem',
     lowPaddingTop: '1rem'
@@ -22,6 +24,7 @@ const Input = {
 
 const Line = {
     margin: '1rem 0',
+    marginLR: '0 0.7rem',
     marginBottom: '1rem',
     marginMidBottom: '0.5rem',
 };

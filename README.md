@@ -13,6 +13,11 @@ REACT, SCSS
 
 ## Todo List
 ### REACT
+
+#### Header
+- [x] nav 클릭 시 window location reload
+- [ ] 해당 nav 표시 border-bottom
+
 #### Login
 - [x] id, password 공백 여부 확인
 - [x] saga로 로그인 아이디 일치 여부 확인 [LOGIN,LOOUT,LOGIN_SUCCESS,LOGIN_FAILURE]
@@ -57,7 +62,7 @@ REACT, SCSS
 - [x] MyPage
 - [x] MyPage Juso
 - [x] Footer
-- [ ] header responsive
+- [x] header responsive
 - [x] Main jumbo responsive
 - [x] Main Product responsive
 - [x] Login responsive

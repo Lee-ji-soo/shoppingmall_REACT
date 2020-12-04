@@ -1,4 +1,5 @@
 import { LoginStyle } from './login';
+import { HeaderStyle } from './header';
 import { MainBannerStyle } from './mainBanner'
 import { ListStyle, Item } from './mainItem'
 import { ButtonStyle } from './button';
@@ -10,6 +11,7 @@ import { JusoStyle } from './juso';
 
 export {
     LoginStyle,
+    HeaderStyle,
     MainBannerStyle,
     ListStyle, Item,
     ButtonStyle,
