@@ -73,29 +73,31 @@ const Mypage = () => {
             <NoScrollpage>
                 <FormStyle>
                     <h3>{name}<span>님, 안녕하세요!</span></h3>
-                    <Juso
-                        openJuso={openJuso}
-                        keyword={keyword}
-                        keyword2={keyword2}
-                        handleInput={handleInput}
-                        handleClose={handleClose}
-                        handleClickJuso={handleClickJuso}
-                        handleSearchJuso={handleSearchJuso}
-                        total={total}
-                        page={page}
-                        onNext={onNext}
-                        onPrev={onPrev}
-                        list={list} />
+                    <div className={`juso_bg ${openJuso ? 'visible' : ''}`}>
+                        <Juso
+                            openJuso={openJuso}
+                            keyword={keyword}
+                            keyword2={keyword2}
+                            handleInput={handleInput}
+                            handleClose={handleClose}
+                            handleClickJuso={handleClickJuso}
+                            handleSearchJuso={handleSearchJuso}
+                            total={total}
+                            page={page}
+                            onNext={onNext}
+                            onPrev={onPrev}
+                            list={list} />
+                    </div>
                     <div className='info_wrap'>
-                        <div>
+                        <div className='type_wrap'>
                             <div className='txt type'>이메일</div>
                             <span className='txt con'>{mail}</span>
                         </div>
-                        <div>
+                        <div className='type_wrap'>
                             <div className='txt type'>핸드폰</div>
                             <span className='txt con'>{phone}</span>
                         </div>
-                        <div className='juso_form'>
+                        <div className='type_wrap juso_wrap'>
                             <div className='txt type'>주소</div>
                             <span className='txt con'>{juso}
                                 <ButtonStyle onClick={handleOpen}>변경</ButtonStyle>

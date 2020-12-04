@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { Basic, Button, Line } from './variables';
 
 const JusoStyle = styled.div`
-    visibility:visible;
-    opacity:1;
+    visibility:hidden;
+    opacity:0;
     position:absolute;
     width:500px;
     height:400px;
@@ -91,6 +91,19 @@ const JusoStyle = styled.div`
         }
         p{
             margin-bottom:0;
+        }
+    }
+    @media (max-width:758px){
+        width:90%;
+        height:auto;
+        .list_wrap{
+            width:100%;
+            max-height:250px;
+            overflow-y:scroll;
+            li{
+                cursor:pointer;
+                margin:${Line.margin};
+            }
         }
     }
 `

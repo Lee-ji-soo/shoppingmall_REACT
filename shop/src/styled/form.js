@@ -22,8 +22,6 @@ const FormStyle = styled.div`
     width:90%;  
     height:max-content;
     margin:0 auto;
-    .juso_wrap{
-    }
     .info_wrap{
         width:100%;
         padding-top:${Basic.midPaddingTop};
@@ -46,23 +44,36 @@ const FormStyle = styled.div`
     @media (max-width:758px){
         .info_wrap{
             padding-top:${Basic.midPaddingTop};
-            p{
+            .type_wrap{
+                display:flex;
+                flex-direction:column;  
                 &:last-child{
                 border-bottom:none;
                 }
                 .txt{
                     padding-left:30px;
                 }
-                display:flex;
-                flex-direction:column;
                 .type{
                     width:100%;
                 }
                 button{
+                display:block;
                 padding:${Button.padding};
+                margin-top:${Basic.lowPaddingTop};
+                margin-left:0;
+                }
             }
         }
- }
+        .juso_bg{
+            &.visible{
+                width:100%;
+                height:100vh;
+                position:fixed;
+                background-color:rgba(1,1,1,0.6);
+                top:0;
+                left:0;
+            }
+        }
 `
 
 export { FormStyle, InputStyle }

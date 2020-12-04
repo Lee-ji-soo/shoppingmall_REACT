@@ -55,7 +55,7 @@ REACT, SCSS
 - [x] Detail
 - [x] Cart
 - [x] MyPage
-- [ ] MyPage Juso
+- [x] MyPage Juso
 - [x] Footer
 - [ ] header responsive
 - [x] Main jumbo responsive
@@ -64,5 +64,5 @@ REACT, SCSS
 - [x] Detail responsive
 - [x] Cart responsive
 - [x] MyPage responsive
-- [ ] MyPage Juso responsive
+- [x] MyPage Juso responsive
 
