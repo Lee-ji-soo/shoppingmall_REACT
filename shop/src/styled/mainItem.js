@@ -28,14 +28,9 @@ const ListStyle = styled.ul`
         }
 
     @media screen and (max-width:768px){   
-            grid-template-columns: repeat(2, minmax(200px, 1fr));
+            grid-template-columns: repeat(2, minmax(150px, 1fr));
             grid-row-gap: 2.5rem;
             grid-column-gap:1rem
-        }
-
-    @media screen and (max-width:576px){    
-            grid-template-columns: repeat(1, minmax(300px, 1fr));
-            grid-row-gap: 2.5rem;
         }
     
 `

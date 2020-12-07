@@ -3,6 +3,7 @@ import { Basic, Line } from './variables';
 
 const CartStyle = styled.div`
     height:80vh;
+    overflow-y:scroll;
     .cartpage_wrap{
         display: flex;
         flex-direction: row;
@@ -25,6 +26,7 @@ const CartStyle = styled.div`
     @media (max-width:758px){
         .cartpage_wrap{
             width:90%;
+            height:max-content;
             margin:0 auto;
             flex-direction:column;
             .cartItems_wrap,
@@ -47,6 +49,9 @@ const CartItemStyle = styled.ul`
         height:200px;
         padding-bottom:1rem;
         margin:${Line.margin};
+        &:last-child{
+            border-bottom:none;
+        }
         .img_wrap{
             width:25%; 
             img{

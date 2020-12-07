@@ -33,6 +33,7 @@ const LoginStyle = styled.section`
 
  @media (max-width:758px){
     width:85%;
+    min-width:310px;
  }
 
 `
