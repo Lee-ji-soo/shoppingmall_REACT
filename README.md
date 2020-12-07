@@ -11,6 +11,52 @@ REACT, SCSS
 <p>Login Access Router</p>
 <img width='800' height='auto' src='https://github.com/Lee-ji-soo/shoppingmall_REACT/blob/main/structure2.jpeg?raw=true'>
 
+## 완성 페이지
+1. 로그인페이지
+- 로그인 시/ 비로그인 시 접근 페이지 설정
+- 카트,마이페이지 비 로그인 시 접근 불가
+- 메인,로그인페이지 비 로그인 시 접근 가능
+<img src='https://raw.githubusercontent.com/Lee-ji-soo/shoppingmall_REACT/main/gif/shop1.gif'/>
+<br>
+<br>
+
+2. 메인페이지
+- Sorting 기능 (낮은/높은 가격순)
+<img src='https://raw.githubusercontent.com/Lee-ji-soo/shoppingmall_REACT/main/gif/shop2.gif'>
+<br>
+<br>
+3. 디테일페이지
+- 탭기능
+- 이미지 스크롤
+<img src='https://raw.githubusercontent.com/Lee-ji-soo/shoppingmall_REACT/main/gif/shop4.gif'>
+<br>
+<br>
+
+4. 디테일페이지
+- 디테일에서 선택한 수량대로 카트에 담기
+<img src='https://raw.githubusercontent.com/Lee-ji-soo/shoppingmall_REACT/main/gif/shop3.gif'>
+<br>
+<br>
+
+5. 카트페이지 
+- 수량 변경시 & 삭제 버튼 클릭 시 확인 문구창 띄우기
+- 카트에 담긴 상품*각수량 총 합 구하여 Total에 가격 표시
+<img src='https://raw.githubusercontent.com/Lee-ji-soo/shoppingmall_REACT/main/gif/shop5.gif'>
+<br>
+<br>
+
+6. 마이페이지 
+- 주소 API 연동
+- 선택 주소 내 정보로 저장하기
+<img src='https://raw.githubusercontent.com/Lee-ji-soo/shoppingmall_REACT/main/gif/shop6.gif'>
+<br>
+<br>
+
+7. mobile responsive<br>
+<img width='200' src='https://raw.githubusercontent.com/Lee-ji-soo/shoppingmall_REACT/main/gif/shop7.gif'>
+<br>
+<br>
+
 ## Todo List
 ### REACT
 
