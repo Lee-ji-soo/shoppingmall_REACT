@@ -26,7 +26,7 @@ const Header = () => {
     }
 
     const reload = (location) => {
-        window.location.href = `/${location}`;
+        // window.location.href = `/${location}`;
     }
 
     return (
