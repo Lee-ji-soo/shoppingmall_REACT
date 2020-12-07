@@ -30,6 +30,7 @@ const Cart = () => {
                         {
                             Items.map((item, i) =>
                                 <CartItem
+                                    quantity={item.quantity}
                                     id={`cartItem${item.id}`}
                                     key={`cartItem${item.id}`}
                                     deleteItem={deleteItem}

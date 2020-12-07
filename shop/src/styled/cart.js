@@ -1,12 +1,14 @@
 import styled from 'styled-components';
-import { Basic, Button, Line, Txt } from './variables';
+import { Basic, Line } from './variables';
 
 const CartStyle = styled.div`
+    height:80vh;
     .cartpage_wrap{
         display: flex;
         flex-direction: row;
         justify-content: center;
         width:80%;
+        height:55vh;
         margin: 0 auto;
         .cartItems_wrap,
         .sum_wrap{

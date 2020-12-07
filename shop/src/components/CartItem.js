@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { nf } from '../utils/const';
 import { ConfirmWindow } from '../styled';
 
-const CartItem = ({ changeQuantity, deleteItem, item: { id, src, brand, name, price } }) => {
+const CartItem = ({ changeQuantity, deleteItem, item: { quantity, id, src, brand, name, price } }) => {
     const [isDelete, setIsDelete] = useState(false);
     const [isChange, setIsChange] = useState(false);
-    const [quantity, setQuantity] = useState(1);
+    const [mainQuantity, setMainQuantity] = useState(quantity);
     const [preQuantity, setPreQuantity] = useState(1);
 
     const handleDeleteButton = () => {
@@ -24,7 +24,7 @@ const CartItem = ({ changeQuantity, deleteItem, item: { id, src, brand, name, pr
 
     const confirmChange = (id) => {
         changeQuantity(preQuantity, id);
-        setQuantity(preQuantity);
+        setMainQuantity(preQuantity);
         setIsChange(false);
     }
 
@@ -68,7 +68,7 @@ const CartItem = ({ changeQuantity, deleteItem, item: { id, src, brand, name, pr
                     </div>
                     <div>
                         <label htmlFor='quantity'>수량:</label>
-                        <select name='quantity' onChange={handleQuantityForm} value={quantity}>
+                        <select name='quantity' onChange={handleQuantityForm} value={mainQuantity}>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
