@@ -33,7 +33,7 @@ REACT, SCSS
 <br>
 
 4. 디테일페이지
-- 디테일에서 선택한 수량대로 카트에 담기
+- 선택한 수량대로 카트에 담기
 <img src='https://raw.githubusercontent.com/Lee-ji-soo/shoppingmall_REACT/main/gif/shop3.gif'>
 <br>
 <br>
