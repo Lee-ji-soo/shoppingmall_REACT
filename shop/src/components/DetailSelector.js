@@ -88,7 +88,7 @@ const DetailSelector = ({ onAddCart, select }) => {
                     <p className="txt">상품을 장바구니에 추가하시겠습니까?</p>
                     <div className='confirm_btn'>
                         <button data-confirm='go' onClick={(e) => { askConfirm(e) }}
-                        >변경</button>
+                        >추가</button>
                         <button data-confirm='no'
                             onClick={askConfirm}>취소</button>
                     </div>
