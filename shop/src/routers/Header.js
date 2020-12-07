@@ -7,7 +7,7 @@ import { HeaderStyle } from '../styled';
 const Header = () => {
     const dispatch = useDispatch();
     const logged = useSelector(({ authReducer }) => authReducer.logged);
-    const [openNav, setopenNav] = useState(false);
+    const [openNav, setOpenNav] = useState(false);
 
     const handleLogin = () => {
         logged
@@ -22,11 +22,11 @@ const Header = () => {
     }
 
     const handleNavMo = () => {
-        setopenNav(!openNav);
+        setOpenNav(!openNav);
     }
 
-    const reload = (location) => {
-        // window.location.href = `/${location}`;
+    const handleClickLink = () => {
+        setOpenNav(false);
     }
 
     return (
@@ -40,16 +40,16 @@ const Header = () => {
                 </section>
                 <ul className={`nav_ul ${openNav ? 'open' : ''}`}>
                     <li>
-                        <Link to='/main' onClick={() => { reload('main') }}>MAIN</Link>
+                        <Link to='/main' onClick={handleClickLink}>MAIN</Link>
                     </li>
                     <li onClick={handleAccess}>
-                        <Link to='/cart' onClick={() => { reload('cart') }}>CART</Link>
+                        <Link to='/cart' onClick={handleClickLink}>CART</Link>
                     </li>
                     <li onClick={handleAccess}>
-                        <Link to='/mypage' onClick={() => { reload('mypage') }}>MYPAGE</Link>
+                        <Link to='/mypage' onClick={handleClickLink}>MYPAGE</Link>
                     </li>
                     <li onClick={handleLogin}>
-                        <Link to='/login' onClick={() => { reload('login') }}>{logged ? 'LOGOUT' : 'LOGIN'}</Link>
+                        <Link to='/login' onClick={handleClickLink}>{logged ? 'LOGOUT' : 'LOGIN'}</Link>
                     </li>
                 </ul>
             </div>
