@@ -9,6 +9,7 @@ const ButtonStyle = styled.button`
         border:${Button.border};
         background-color:${Button.backgroundColor};
         font-size:${Button.fontSize};
+        &.active,
         &:hover{
             color:#fff;
             background-color:#333;
