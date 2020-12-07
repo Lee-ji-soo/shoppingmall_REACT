@@ -3,6 +3,7 @@ import { Input, Line } from './variables';
 
 const LoginStyle = styled.section`
     width:35%;
+    height:55vh;
     min-width:440px;
     margin:6rem auto;
         #modal_title{
