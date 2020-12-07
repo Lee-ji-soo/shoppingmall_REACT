@@ -104,6 +104,15 @@ const DetailInfoStyle = styled.div`
                         background-color:#222;
                     }
                 }
+                #addOrNot{
+                    width:350px;
+                    height:250px;
+                    border-radius:10px;
+                    border:1px soild #dbdbdb;
+                    top:30%;
+                    left:50%;
+                    transform:translate(-50%,-50%);
+                }
             }
         }
     }

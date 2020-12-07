@@ -1,4 +1,5 @@
 import { LoginStyle } from './login';
+import { ConfirmWindow } from './confirm';
 import { HeaderStyle } from './header';
 import { MainBannerStyle } from './mainBanner'
 import { ListStyle, Item } from './mainItem'
@@ -11,6 +12,7 @@ import { JusoStyle } from './juso';
 
 export {
     LoginStyle,
+    ConfirmWindow,
     HeaderStyle,
     MainBannerStyle,
     ListStyle, Item,

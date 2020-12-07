@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { nf } from '../utils/const';
+import { ConfirmWindow } from '../styled';
 
 const CartItem = ({ changeQuantity, deleteItem, item: { id, src, brand, name, price } }) => {
     const [isDelete, setIsDelete] = useState(false);
@@ -79,7 +80,7 @@ const CartItem = ({ changeQuantity, deleteItem, item: { id, src, brand, name, pr
             </div>
             <button data-item={`cartItem${id}`} className="cart_delte-btn"
                 onClick={handleDeleteButton}>X</button>
-            <div id="deleteOrNot" className={`confirmWindow ${isDelete ? 'visible' : ''}`}>
+            <ConfirmWindow id="deleteOrNot" className={`confirmWindow ${isDelete ? 'visible' : ''}`}>
                 <p className="txt">상품을 삭제하시겠습니까?</p>
                 <div className='confirm_btn'>
                     <button data-confirm='go'
@@ -87,8 +88,8 @@ const CartItem = ({ changeQuantity, deleteItem, item: { id, src, brand, name, pr
                     <button data-confirm='no'
                         onClick={askConfirm}>취소</button>
                 </div>
-            </div>
-            <div id="changeOrNot" className={`confirmWindow ${isChange ? 'visible' : ''}`}>
+            </ConfirmWindow>
+            <ConfirmWindow id="changeOrNot" className={`confirmWindow ${isChange ? 'visible' : ''}`}>
                 <p className="txt">수량을 변경하시겠습니까?</p>
                 <div className='confirm_btn'>
                     <button data-confirm='go' onClick={(e) => { askConfirm(e, id) }}
@@ -96,7 +97,7 @@ const CartItem = ({ changeQuantity, deleteItem, item: { id, src, brand, name, pr
                     <button data-confirm='no'
                         onClick={askConfirm}>취소</button>
                 </div>
-            </div>
+            </ConfirmWindow>
         </li>
     )
 };
