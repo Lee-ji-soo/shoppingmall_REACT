@@ -38,6 +38,7 @@ REACT, SCSS
 - [x] selection으로 수량, 색상, 사이즈 선택기능
 - [x] 'Product|info|ship' 탭 기능
 - [x] 최종 선택한 selection cart페이지 전달 (reducer)
+- [x] 장바구니 추가 버튼 클릭 시 확인 버튼
 
 #### Cart
 - [x] cart Reducer 에서 저장된 cart 내역 카트 페이지에 랜더
