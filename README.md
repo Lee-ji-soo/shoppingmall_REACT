@@ -7,7 +7,7 @@ REACT, SCSS
 
 ## Sketch
 <p>Structure</p>
-<img width='400' height='auto' src='https://github.com/Lee-ji-soo/shoppingmall_REACT/blob/main/structure1.jpeg?raw=true'>
+<img height='auto' src='https://github.com/Lee-ji-soo/shoppingmall_REACT/blob/main/structure1.jpeg?raw=true'>
 
 <br><br>
 ## 완성 페이지
