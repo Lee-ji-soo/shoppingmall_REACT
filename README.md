@@ -5,10 +5,6 @@
 ## lang
 REACT, SCSS
 
-## Sketch
-<p>Structure</p>
-<img height='auto' src='https://github.com/Lee-ji-soo/shoppingmall_REACT/blob/main/structure1.jpeg?raw=true'>
-
 <br><br>
 ## 완성 페이지
 1. 로그인페이지
@@ -56,6 +52,10 @@ REACT, SCSS
 <img width='200' src='https://raw.githubusercontent.com/Lee-ji-soo/shoppingmall_REACT/main/gif/shop7.gif'>
 <br>
 <br>
+
+## Sketch
+<p>Structure</p>
+<img height='auto' src='https://github.com/Lee-ji-soo/shoppingmall_REACT/blob/main/structure1.jpeg?raw=true'>
 
 ## Todo List
 ### REACT
