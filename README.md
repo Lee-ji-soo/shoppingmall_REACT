@@ -1,11 +1,9 @@
 # shoppingmall_REACT
  shoppingmall with React<br>
  Javascript -> REACT 🔄
-
 ## lang
 REACT, SCSS
-
-<br><br>
+<br>
 ## 완성 페이지
 1. 로그인페이지
 - 로그인 시/ 비로그인 시 접근 페이지 설정
